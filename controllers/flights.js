@@ -73,11 +73,26 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+	}
+  Flight.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(flight => {
+    res.redirect(`/flights/${flight._id}`)
+  })
+  .catch(error => {
+    console.error(error)
+    res.redirect('/')
+  })
+}
+
 export {
   newFlight as new,
   create,
   index,
   show,
   deleteFlight as delete,
-  edit
+  edit,
+  update
 }
