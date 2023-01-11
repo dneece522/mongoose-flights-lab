@@ -56,3 +56,11 @@ app.use(function (err, req, res, next) {
 export {
   app
 }
+
+// Lab Part 2 Exercies:
+
+//// 1. Create a ticketSchema that will provide the structure for ticket subdocuments that will be embedded:
+//// 2. Add the following additional property to the Flight Model:
+// 3. Implement the following User Story: AAU, when viewing the list of flights, I want to click on a “detail” link displayed next to each flight to view all of the properties for that flight (`show` view). This show page should include each of its tickets.
+// 4. Implement the following User Story: AAU, when viewing the details page (`show` view) for a flight, I want to be able to add a ticket for that flight. Each ticket, as defined by the schema above, includes a `seat` and a `price`.
+// 5. Implement the following User Story: AAU, when viewing the details page (`show` view) for a flight, I want to see a list of that flight’s `tickets` (`seat` & `price`)
