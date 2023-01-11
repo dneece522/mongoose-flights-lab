@@ -18,6 +18,9 @@ function create(req, res) {
 }
 
 function index(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+	}
   Flight.find({})
   .then(flights => {
     res.render('flights/index', {
@@ -31,8 +34,23 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  Flight.findById(req.params.id)
+  .then(flight => {
+    res.render('flights/show', {
+      title: 'Flight Detail',
+      flight: flight
+    })
+  })
+  .catch(error => {
+    console.error(error)
+    res.redirect('/')
+  })
+}
+
 export {
   newFlight as new,
   create,
   index,
+  show,
 }
