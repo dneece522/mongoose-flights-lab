@@ -59,8 +59,9 @@ export {
 
 // Lab Part 2 Exercies:
 
-//// 1. Create a ticketSchema that will provide the structure for ticket subdocuments that will be embedded:
-//// 2. Add the following additional property to the Flight Model:
-// 3. Implement the following User Story: AAU, when viewing the list of flights, I want to click on a “detail” link displayed next to each flight to view all of the properties for that flight (`show` view). This show page should include each of its tickets.
-// 4. Implement the following User Story: AAU, when viewing the details page (`show` view) for a flight, I want to be able to add a ticket for that flight. Each ticket, as defined by the schema above, includes a `seat` and a `price`.
-// 5. Implement the following User Story: AAU, when viewing the details page (`show` view) for a flight, I want to see a list of that flight’s `tickets` (`seat` & `price`)
+// 1. Create a mealSchema that will be compiled into a Meal Model with the following properties:
+// 2. In the Flight Model, add a reference to the Meal.
+// 3. Add a link in the navbar for ‘Add Meal.’ Identify and code the route, then write the controller function to display a `meals/new.ejs` view containing a form for entering new meals.
+// 4. Identify the route path/verb for the form. Code the route, then the controller function for creating a new meal. The list of meals should be displayed below the form to prevent the user from entering duplicates. (You’ll need to refactor the controller function from the previous step to include a query for ALL meals to show them on the page!)
+// 5. Update the `show` view to display a `<select>` element with an `<option>` for each meal. The user should click a button adjacent to the `<select>` to add the selected meal to the list for that flight.
+// 6. Update the `show` view to list all current meals that have been added for the flight. (You’ll need to update the controller function as well. `populate` to the rescue!!!)
