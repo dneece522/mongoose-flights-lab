@@ -11,6 +11,7 @@ import './config/database.js'
 // import routers
 import { router as indexRouter } from './routes/index.js'
 import { router as flightsRouter } from './routes/flights.js'
+import { router as mealsRouter } from './routes/meals.js'
 
 // set up app
 const app = express()
@@ -36,6 +37,7 @@ app.use(methodOverride('_method'))
 // mounted routers
 app.use('/', indexRouter)
 app.use('/flights', flightsRouter)
+app.use('/meals', mealsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -59,7 +61,7 @@ export {
 
 // Lab Part 2 Exercies:
 
-// 1. Create a mealSchema that will be compiled into a Meal Model with the following properties:
+//// 1. Create a mealSchema that will be compiled into a Meal Model with the following properties:
 // 2. In the Flight Model, add a reference to the Meal.
 // 3. Add a link in the navbar for ‘Add Meal.’ Identify and code the route, then write the controller function to display a `meals/new.ejs` view containing a form for entering new meals.
 // 4. Identify the route path/verb for the form. Code the route, then the controller function for creating a new meal. The list of meals should be displayed below the form to prevent the user from entering duplicates. (You’ll need to refactor the controller function from the previous step to include a query for ALL meals to show them on the page!)
