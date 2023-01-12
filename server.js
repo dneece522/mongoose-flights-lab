@@ -62,8 +62,8 @@ export {
 // Lab Part 2 Exercies:
 
 //// 1. Create a mealSchema that will be compiled into a Meal Model with the following properties:
-// 2. In the Flight Model, add a reference to the Meal.
-// 3. Add a link in the navbar for ‘Add Meal.’ Identify and code the route, then write the controller function to display a `meals/new.ejs` view containing a form for entering new meals.
+//// 2. In the Flight Model, add a reference to the Meal.
+//// 3. Add a link in the navbar for ‘Add Meal.’ Identify and code the route, then write the controller function to display a `meals/new.ejs` view containing a form for entering new meals.
 // 4. Identify the route path/verb for the form. Code the route, then the controller function for creating a new meal. The list of meals should be displayed below the form to prevent the user from entering duplicates. (You’ll need to refactor the controller function from the previous step to include a query for ALL meals to show them on the page!)
 // 5. Update the `show` view to display a `<select>` element with an `<option>` for each meal. The user should click a button adjacent to the `<select>` to add the selected meal to the list for that flight.
 // 6. Update the `show` view to list all current meals that have been added for the flight. (You’ll need to update the controller function as well. `populate` to the rescue!!!)
